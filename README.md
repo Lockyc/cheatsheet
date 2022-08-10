@@ -5,4 +5,5 @@
 
 # [cli](cli/README.md)
 # [macOS](macOS/README.md)
+# [markdown](markdown/README.md)
 # [vim](vim/README.md)
