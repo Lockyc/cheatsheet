@@ -27,7 +27,7 @@ The technique consists in storing a [Git bare repository][5] in a "_side_" fol
 
 If you haven't been tracking your configurations in a Git repository before, you can start using this technique easily with these lines:
 
-```
+``` bash
 git init --bare $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
@@ -41,13 +41,13 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" 
 
 I packaged the above lines into a [snippet][7] up on Bitbucket and linked it from a short-url. So that you can set things up with:
 
-```
+``` bash
 curl -Lks http://bit.do/cfg-init | /bin/bash
 ```
 
 After you've executed the setup any file within the `$HOME` folder can be versioned with normal commands, replacing `git` with your newly created `config` alias, like:
 
-```
+``` bash
 config status
 config add .vimrc
 config commit -m "Add vimrc"
@@ -62,25 +62,25 @@ If you already store your configuration/dotfiles in a [Git repository][8], on a
 
 -   Prior to the installation make sure you have committed the alias to your `.bashrc` or `.zsh`:
 
-```
+``` bash
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
 -   And that your source repository ignores the folder where you'll clone it, so that you don't create weird recursion problems:
 
-```
+``` bash
 echo ".cfg" >> .gitignore
 ```
 
 -   Now clone your dotfiles into a [bare][9] repository in a "_dot_" folder of your `$HOME`:
 
-```
+``` bash
 git clone --bare <git-repo-url> $HOME/.cfg
 ```
 
 -   Define the alias in the current shell scope:
 
-```
+``` bash
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
@@ -88,7 +88,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 -   The step above might fail with a message like:
 
-```
+``` bash
 error: The following untracked working tree files would be overwritten by checkout:
     .bashrc
     .gitignore
@@ -98,7 +98,7 @@ Aborting
 
 This is because your `$HOME` folder might already have some stock configuration files which would be overwritten by Git. The solution is simple: back up the files if you care about them, remove them if you don't care. I provide you with a possible rough shortcut to move all the offending files automatically to a backup folder:
 
-```
+``` bash
 mkdir -p .config-backup && \
 config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .config-backup/{}
@@ -108,13 +108,13 @@ xargs -I{} mv {} .config-backup/{}
 
 -   Set the flag `showUntrackedFiles` to `no` on this specific (local) repository:
 
-```
+``` bash
 config config --local status.showUntrackedFiles no
 ```
 
 -   You're done, from now on you can now type `config` commands to add and update your dotfiles:
 
-```
+``` bash
 config status
 config add .vimrc
 config commit -m "Add vimrc"
@@ -125,13 +125,13 @@ config push
 
 Again as a shortcut not to have to remember all these steps on any new machine you want to setup, you can create a simple script, [store it as Bitbucket snippet][10] like I did, [create a short url][11] for it and call it like this:
 
-```
+``` bash
 curl -Lks http://bit.do/cfg-install | /bin/bash
 ```
 
 For completeness this is what I ended up with (tested on many freshly minted [Alpine Linux][12] containers to test it out):
 
-```
+``` bash
 git clone --bare https://bitbucket.org/durdn/cfg.git $HOME/.cfg
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
