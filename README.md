@@ -4,6 +4,7 @@
 📜 A compendium of commands & configurations I use somewhat regularly but cannot remember
 
 # [cli](cli/README.md)
+# [dotfiles](dotfiles/README.md)
 # [macOS](macOS/README.md)
 # [markdown](markdown/README.md)
 # [vim](vim/README.md)
