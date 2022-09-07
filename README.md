@@ -10,4 +10,4 @@
 # [vim](vim/README.md)
 
 ---
-###### [cheatsheet](https://github.com/Lockyc/cheatsheet) | [dotfiles](https://github.com/Lockyc/dotfiles)
+<sup>[cheatsheet](https://github.com/Lockyc/cheatsheet) | [dotfiles](https://github.com/Lockyc/dotfiles)<sup>
