@@ -8,3 +8,6 @@
 # [macOS](macOS/README.md)
 # [markdown](markdown/README.md)
 # [vim](vim/README.md)
+
+---
+###### [cheatsheet](https://github.com/Lockyc/cheatsheet) | [dotfiles](https://github.com/Lockyc/dotfiles)
