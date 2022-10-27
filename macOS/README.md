@@ -3,3 +3,4 @@
 # [How to reset NVRAM or PRAM on Mac](<How to reset NVRAM or PRAM on Mac - iGeeksBlog.md>)
 # [How to reset SMC on Mac and why you might want to (Intel-based Macs)](<How to reset SMC on Mac and why you might want to (Intel-based Macs) - iGeeksBlog.md>)
 # [macOS System Hotkeys](<macOS System Hotkeys.md>)
+# [macOS find app using Secure Input](<macOS find app using Secure Input.md>)
