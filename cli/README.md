@@ -14,3 +14,6 @@ verbose
 ```
 tar -xvf something.tar.gz
 ```
+
+---
+<sup>[cheatsheet](https://github.com/Lockyc/cheatsheet) | [dotfiles](https://github.com/Lockyc/dotfiles)<sup>
