@@ -12,3 +12,8 @@ cmd + opt + space
 ```
 cmd + ctrl + space
 ```
+
+## Close all windows for an app
+```
+cmd + opt + w
+```
