@@ -21,3 +21,10 @@ source: https://git.herrbischoff.com/awesome-macos-command-line/about/
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true && \
 defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 ```
+
+# Software Update
+## Set Software Update Check Interval
+Set to check daily instead of weekly.
+```
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+```
