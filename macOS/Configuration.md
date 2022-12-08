@@ -28,7 +28,6 @@ Set to check daily instead of weekly.
 ```
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
-# Software Update
 ## Install All Available Software Updates
 ```
 sudo softwareupdate -ia
