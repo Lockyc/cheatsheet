@@ -1,6 +1,7 @@
 Random Configuration Settings
 # Icon Bounce
 source: https://git.herrbischoff.com/awesome-macos-command-line/about/
+
 Global setting whether Dock icons should bounce when the respective application demands your attention.
 
 ## Enable (Default)
