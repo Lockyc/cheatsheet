@@ -1,3 +1,4 @@
+# [Configuration](Configuration.md)
 # [Create a Shortcut Using Keyboard Shortcuts](<Create a Shortcut Using Keyboard Shortcuts.md>)
 # [How to create a shortcut to paste and match style on Mac](<How to create a shortcut to paste and match style on Mac - 9to5Mac.md>)
 # [How to reset NVRAM or PRAM on Mac](<How to reset NVRAM or PRAM on Mac - iGeeksBlog.md>)
