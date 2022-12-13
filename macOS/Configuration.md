@@ -4,13 +4,14 @@ source: https://git.herrbischoff.com/awesome-macos-command-line/about/
 
 Global setting whether Dock icons should bounce when the respective application demands your attention.
 
-## Enable (Default)
+## Disable bouncing
 ```
 defaults write com.apple.dock no-bouncing -bool true && \
 killall Dock
 ```
 
-## Disable
+## Enable bouncing (Default)
+or delete the key?
 ```
 defaults write com.apple.dock no-bouncing -bool false && \
 killall Dock
