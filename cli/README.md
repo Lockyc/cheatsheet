@@ -28,7 +28,7 @@ find /usr/local -name '.DS_Store' -type f -print -delete
 find ~/.nvm -name '.DS_Store' -type f -print -delete
 ```
 
-# Function parameters
+# zsh function parameters
 
 ```
 # Documentation for regularily used function parameters
