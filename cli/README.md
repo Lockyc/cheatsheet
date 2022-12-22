@@ -25,7 +25,6 @@ find ~/.nvm -name '.DS_Store' -type f -print -delete
 ```
 
 # zsh function parameters
-
 ```
 # Documentation for regularily used function parameters
 # Argument accssing
@@ -43,7 +42,6 @@ testing(){
 	echo "\${@:3} = " ${@:3}
 }
 ```
-
 # ohmyzsh Commands
 
 | Command         | Description                                                                                |
