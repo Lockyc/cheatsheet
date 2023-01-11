@@ -1,3 +1,20 @@
+# !! & !$
+```!!``` is previous command.
+e.g.
+```
+shutdown -h
+sudo !!
+=> sudo shutdown -h
+```
+
+```!$``` is previous command arguments.
+e.g.
+```
+cat .zshrc_backup
+rm !$
+=> rm .zshrc_backup
+```
+
 # Tar
 extract
 ```
