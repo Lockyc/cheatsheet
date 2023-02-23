@@ -23,6 +23,23 @@ source: https://git.herrbischoff.com/awesome-macos-command-line/about/
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true && \
 defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 ```
+# Usability hack: Click & drag anywhere in macOS windows to move them
+source: https://www.mackungfu.org/UsabilityhackClickdraganywhereinmacOSwindowstomovethem
+
+Restart inbetween, or restart specific app for it to work for that app
+
+From now on you can hold down Ctrl+Cmd, then click and drag ANYWHERE in a window to move it.
+
+## Enable
+```
+defaults write -g NSWindowShouldDragOnGesture -bool true
+```
+
+## Disable
+```
+defaults delete -g NSWindowShouldDragOnGesture
+```
+
 
 # Software Update
 ## Set Software Update Check Interval
