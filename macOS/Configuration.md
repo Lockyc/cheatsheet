@@ -55,3 +55,7 @@ sudo softwareupdate -ia
 ```
 sudo softwareupdate --list
 ```
+
+# Turn off low power mode
+![CleanShot 2023-02-28 at 14 29 03@2x](https://user-images.githubusercontent.com/1438799/221754240-fb2220a0-828b-43d5-9859-c28e78a4912b.png)
+
