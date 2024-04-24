@@ -1,7 +1,7 @@
-Random Configuration Settings
+# Random Configuration Settings
 
-from: https://github.com/sickcodes/osx-optimizer/
-A great way to see what ticking and unticking a box in the Settings App is by using:
+## A great way to see what ticking and unticking a box in the Settings App is by using:
+source: https://github.com/sickcodes/osx-optimizer/
 
 ```bash
 defaults read > defaults.pre.txt
@@ -31,7 +31,7 @@ defaults write com.apple.dock no-bouncing -bool false && \
 killall Dock
 ```
 
-## Reduce Motion & Transparency
+# Reduce Motion & Transparency
 
 ```bash
 defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
@@ -40,7 +40,7 @@ defaults write com.apple.universalaccess reduceMotion -int 1
 defaults write com.apple.universalaccess reduceTransparency -int 1
 ```
 
-## Enable performance mode
+# Enable performance mode
 
 Turn on performance mode to dedicate additional system resources for server applications.
 
