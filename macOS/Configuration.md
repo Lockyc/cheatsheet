@@ -1,4 +1,18 @@
 Random Configuration Settings
+
+from: https://github.com/sickcodes/osx-optimizer/
+A great way to see what ticking and unticking a box in the Settings App is by using:
+
+```bash
+defaults read > defaults.pre.txt
+
+# *make a change in Settings*
+
+defaults read > defaults.post.txt
+
+diff defaults.pre.txt defaults.post.txt
+```
+
 # Icon Bounce
 source: https://git.herrbischoff.com/awesome-macos-command-line/about/
 
@@ -15,6 +29,32 @@ or delete the key?
 ```
 defaults write com.apple.dock no-bouncing -bool false && \
 killall Dock
+```
+
+## Reduce Motion & Transparency
+
+```bash
+defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
+defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
+defaults write com.apple.universalaccess reduceMotion -int 1
+defaults write com.apple.universalaccess reduceTransparency -int 1
+```
+
+## Enable performance mode
+
+Turn on performance mode to dedicate additional system resources for server applications.
+
+Details: https://support.apple.com/en-us/HT202528
+
+```
+# check if enabled (should contain `serverperfmode=1`)
+nvram boot-args
+
+# turn on
+sudo nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-)"
+
+# turn off
+sudo nvram boot-args="$(nvram boot-args 2>/dev/null | sed -e $'s/boot-args\t//;s/serverperfmode=1//')"
 ```
 
 # Expand Save Panel by Default
