@@ -6,6 +6,7 @@
 # [Turn on performance mode for macOS Server](<Turn on performance mode for macOS Server - Apple Support.md>)
 # [macOS System Hotkeys](<macOS System Hotkeys.md>)
 # [macOS find app using Secure Input](<macOS find app using Secure Input.md>)
+# [commands](<commands.md>)
 ---
 <sup>[cheatsheet](https://github.com/Lockyc/cheatsheet) | [dotfiles](https://github.com/Lockyc/dotfiles)<sup>
 
